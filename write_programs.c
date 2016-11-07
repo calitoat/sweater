@@ -6,7 +6,7 @@
 /*   By: icuz <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 16:49:46 by icuz              #+#    #+#             */
-/*   Updated: 2016/11/06 18:55:07 by icuz             ###   ########.fr       */
+/*   Updated: 2016/11/06 21:01:31 by icuz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }
 
 void	ft_putstr(const char *str)
@@ -22,8 +22,8 @@ void	ft_putstr(const char *str)
 	int i;
 
 	i = 0;
-	while(str[i])
-	ft_putchar(str[i++]);
+	while (str[i])
+		ft_putchar(str[i++]);
 }
 
 void	print_grid(int **grid)
@@ -32,10 +32,10 @@ void	print_grid(int **grid)
 	int j;
 
 	i = -1;
-	while(++i < 9)
+	while (++i < 9)
 	{
 		j = -1;
-		while(++j < 9)
+		while (++j < 9)
 		{
 			ft_putchar(grid[i][j] + '0');
 			if (j < 8)
@@ -66,8 +66,8 @@ int		**new_grid(void)
 
 	i = 0;
 	output = (int **)malloc((9) * sizeof(int *));
-	while(i < 9)
+	while (i < 9)
 		output[i++] = (int *)malloc((9) * sizeof(int));
 	gridblank(output);
-	return output;
+	return (output);
 }
